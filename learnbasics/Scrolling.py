@@ -1,17 +1,18 @@
 import time
-
+from learnbasics.CaptureScreenshot import CaptureScreenshot
 from selenium import webdriver
+
 
 driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe")
 driver.implicitly_wait(5)
 driver.maximize_window()
-
+cs = CaptureScreenshot(driver)
 driver.get("http://testautomationpractice.blogspot.com/")
 time.sleep(2)
 #Scroll down by Pixels
 driver.execute_script("window.scrollBy(0,200)","")
 time.sleep(2)
-driver.save_screenshot("C:/Users/deepa/Documents/test.png")
+cs.capture_screenshot("C:/Users/deepa/Documents/test.png")
 #scroll till an element
 time.sleep(2)
 email = driver.find_element_by_xpath("//email[text()='david@myemail.com']")
@@ -22,9 +23,5 @@ time.sleep(2)
 time.sleep(2)
 driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")
 time.sleep(2)
-
-driver.quit()
-
-
 
 driver.quit()
