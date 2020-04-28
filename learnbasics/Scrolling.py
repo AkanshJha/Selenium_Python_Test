@@ -12,7 +12,7 @@ time.sleep(2)
 #Scroll down by Pixels
 driver.execute_script("window.scrollBy(0,200)","")
 time.sleep(2)
-cs.capture_screenshot("C:/Users/deepa/Documents/test.png")
+cs.capture_screenshot_in_png("C:/Users/deepa/Documents/test.png")
 #scroll till an element
 time.sleep(2)
 email = driver.find_element_by_xpath("//email[text()='david@myemail.com']")
@@ -22,6 +22,7 @@ time.sleep(2)
 #scroll till the end of the page
 time.sleep(2)
 driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")
+cs.capture_screenshot_in_anyformat("C:/Users/deepa/Documents/filename.jpg")
 time.sleep(2)
 
 driver.quit()
