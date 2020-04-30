@@ -1,5 +1,5 @@
 import unittest
-
+def setUpmod
 
 class MyTestCase(unittest.TestCase):
 
